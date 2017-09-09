@@ -23,10 +23,14 @@ public class Reader {
             while ((line = br.readLine()) != null) {
                 if ((line.length() >= 13) && line.substring(0,13).equals("/Information:")) {
                     while ((station = br.readLine()) != null) {
-                        String[] parts = station.split(":");
+                        String[] split = station.split("-");
+                        String[] zuobiao = split[1].split(",");
+                        int x = Integer.parseInt(zuobiao[0]);
+                        int y = Integer.parseInt(zuobiao[1]);
+                        String[] parts = split[0].split(":");
                         int ppl = Integer.parseInt(parts[1]);
-//                        System.out.println(parts[0] + "+" + ppl);
-                        Location info = new Location(0,1,parts[0],ppl);
+//                        System.out.println(parts[0] + "+" + x + "+" + y);
+                        Location info = new Location(x,y,parts[0],ppl);
                         marta.add(info);
                     }
                 }
@@ -36,9 +40,9 @@ public class Reader {
         }
         return marta;
     }
-    public static void main(String[] args) {
-        Reader myReader = new Reader();
-        myReader.readInputText();
-    }
+//    public static void main(String[] args) {
+//        Reader myReader = new Reader();
+//        myReader.readInputText();
+//    }
 
 }
