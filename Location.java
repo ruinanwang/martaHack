@@ -11,12 +11,17 @@ public class Location {
     private int[] RGB;
 
     /** Constructor */
-    public Location(int xValue, int yValue, String name) {
+    public Location(int xValue, int yValue, String name, int pFlow) {
         this.xValue = xValue;
         this.yValue = yValue;
         stationName = name;
+        this.pFlow = pFlow;
         RGB = new int[3];
 
+    }
+
+    public Location() {
+        this(0, 0, null,0);
     }
 
     /** Bunch of getters and setters */
