@@ -1,5 +1,5 @@
 NORTH-EAST LINE
 
 /Information:
-Doraville:19-80,0
-Chamblee:25-75,5Brookhaven:70-70,10Lenox:45-65,15Lindbergh Center:60-60,20Arts Center:60-55,25Midtown:70-50,30North Avenue:80-45,35Civic center:90-40,40Ptree Ctr:10-35,45Garnett:34-30,50West end:63-25,55Oakland City:99-20,60Lakewood:46-15,65East Point:36-10,70College park:56-5,75Atlanta Airport:87-0,80
+Doraville:19-80,1
+Chamblee:25-75,5Brookhaven:70-70,10Lenox:45-65,15Lindbergh Center:60-60,20Arts Center:60-55,25Midtown:80-50,30North Avenue:80-45,35Civic center:90-40,40Ptree Ctr:10-35,45Garnett:34-30,50West end:63-25,55Oakland City:99-20,60Lakewood:46-15,65East Point:36-10,70College park:56-5,75Atlanta Airport:87-1,80
