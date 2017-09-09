@@ -21,12 +21,15 @@ public class Layout extends Application {
 	private static GridPane grid;
     private static Button button;
 
+    private static Reader reader;
+
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) {
+        reader = new Reader();
 
         stage = primaryStage;
         window = new BorderPane();
@@ -35,11 +38,21 @@ public class Layout extends Application {
         grid = new GridPane();
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 100; j++) {
-                if (i == j) {
-                    Rectangle current = new Rectangle(10, 10);
-                    grid.add(current, i, j);
-                }
+                Rectangle current = new Rectangle(10, 10);
+                current.setFill(Color.DARKGRAY);
+                grid.add(current, i, j);
             }
+        }
+
+        for (Location location: reader.readInputText()) {
+            int x = location.getX();
+            int y = location. getY();
+            Rectangle r = new Rectangle(10, 10);
+            double weight = (double)location.getpFlow() / (double)100;
+            System.out.println(weight);
+            double red = (double)255 * weight;
+            r.setFill(Color.rgb((int)red, 0, 0));
+            grid.add(r, x, y);
         }
 
         window.setCenter(grid);

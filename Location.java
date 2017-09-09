@@ -62,6 +62,14 @@ public class Location {
         return isStation;
     }
 
+    public int getX() {
+        return xValue;
+    }
+
+    public int getY() {
+        return yValue;
+    }
+
     /** return the proper RGB value for current location
      *
      * @param red the red value for RGB
@@ -69,10 +77,10 @@ public class Location {
      * @param blue the blue value for RGB
      * @return the
      */
-    public int[] getLocationRGB(int red, int green, int blue) {
-        if (isStation) {
-            RGB[0] = 255;
-        }
+    public int[] getLocationRGB() {
+        RGB[0] = 255;
+        RGB[1] = 0;
+        RGB[1] = 0;
         return RGB;
     }
 
